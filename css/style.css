@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+    color: #000000;
+    border-radius: .8rem;
+}
+
+
+/* Header */
+
+header {
+    /*position: sticky;*/
+    top: 0px;
+    background-color: #fff;
+    opacity: .4;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    animation: load 1.5s ease-in-out;
+    opacity: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem .5rem;
+}
+
+nav ul li {
+    margin: 0 .8rem;
+    font-size: 2rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    opacity: 1;
+}
+
+nav ul li:hover {
+    color: yellow;
+}
+
+nav ul li:focus {
+    color: #15FFB8;
+}
+
+
+
+
+body {
+    background: url('../assets/e8e1b1_80517345094544d580d606e5750b56a8~mv2.gif') no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+}
+
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: block;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 5rem;
+    animation: load 1.5s ease-in-out;
+    /*font-family: 'Rubik Moonrocks', cursive;*/
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+strong { font-family: 'Rubik Wet Paint', cursive; }
+
+.about {
+    padding-top: 90px;
+    border-top: 1px solid #fff;
+    animation: load 1.5s ease-in-out;
+    
+}
+
+.about__container:hover {
+    box-shadow: 3px 3px 5px #fff;
+    transform: translateY(2px);
+    transition: all .5s linear;
+    cursor: pointer;
+}
+
+.about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #15FFB8;
+    border-radius: .8rem;
+    opacity: .5;
+    margin-bottom: 6rem;
+    padding: .9rem
+}
+
+.about__container img {
+    width: 10rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: .9rem;
+}
+
+.about__container text {
+    align-self: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: .2rem .1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

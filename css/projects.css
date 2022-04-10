@@ -1,0 +1,59 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load 1.5s ease-in-out;
+    flex-direction: column;
+    background-color: rgba(237, 212, 156, 0.5);
+    padding: 1.2rem 0;
+    border-top: 1px solid rgba(255, 255, 255);
+}
+
+.projects h1 {
+    margin-bottom: 30px;
+}
+
+.projects__title {
+    font-size: 3em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fff;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.project {
+    background-color: rgb(21, 255, 184, 0.9);
+    width: 395px;
+    height: 400px;
+    border-radius: .8rem;
+    opacity: .7;
+    margin: .2rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.project:hover {  
+    box-shadow: 3px 3px 5px #fff;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%,#fff);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    animation: spinner-zp9dbg 1s infinite linear;
+ }
+ 
+ @keyframes spinner-zp9dbg {
+    to {
+       transform: rotate(1turn);
+    }
+ }
+
