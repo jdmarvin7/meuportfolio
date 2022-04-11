@@ -60,14 +60,26 @@
             <div class="project project__1">
                 <div class="spinner"></div>
             </div>
+            <!--
             <div class="project project__1">
                 <div class="spinner"></div>
             </div>
             <div class="project project__1">
                 <div class="spinner"></div>
-            </div>
+            </div>-->
         </div>
     </section>
+
+    <div class="topo" style="
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: blueviolet;
+    cursor: pointer;
+    ">
+        Back to the top!
+    </div>
 
     <section class="skills" id="skills">
         <h1><Strong class="skills__title">Skills</Strong></h1>
@@ -143,11 +155,31 @@
     </div>
 
     <script>
-        $("section.lazy").lazyload();
-        $("section.lazy").lazyload();
+
+        const topo = document.querySelector('.topo');
+        topo.addEventListener('click', () => {
+            console.log('clicou');
+            return window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        });
+
+        //let elem = document.getElementById('perc');
+        let doc = document.documentElement
+
+        window.addEventListener('scroll', function() {
+            let value = parseInt(100 * doc.scrollTop / (doc.scrollHeight - doc.clientHeight))
+            //elem.innerHTML = value + '%'
+
+            if(value > 36) {
+                topo.style.display = 'block';
+                console.log(value);
+            } 
+            else if(value < 36){
+                topo.style.display = 'none';
+            }
+        })
     </script>
-    <script src="jquery.js" type="text/javascript"></script>
-    <script src="jquery.lazyload.js" type="text/javascript"></script>
-    <script type="text/javascript" src="jquery.lazy.min.js"></script>
 </body>
 </html>
