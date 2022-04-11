@@ -140,6 +140,15 @@ button {
     }
 }
 
+.social {
+    display: flex;
+}
+
+.social a img {
+    width: 40px;
+    margin: .5rem;
+}
+
 @media
 (prefers-reduced-motion: no-preference) {
   html {
