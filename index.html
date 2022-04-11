@@ -25,14 +25,14 @@
     </header>
     <main>
         <section>
-            <h1>
+            <h1 class="title">
                 <span>Hello,</span>
                 <span>I' m <strong>Marvin</strong></span>
                 <span>Web Developer</span>
             </h1>
         </section>
     </main>
-    <section class="about" id="about">
+    <section class="about lazy" id="about">
         <div class="about__container">
             <div>
                 <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" alt="">
@@ -48,7 +48,7 @@
         </div>
     </section>
 
-    <section class="projects" id="projects">
+    <section class="projects lazy" id="projects">
         <h1><Strong class="projects__title">Projects</Strong></h1>
         <div class="projects-container">
             <div class="project project__1">
@@ -143,22 +143,11 @@
     </div>
 
     <script>
-        let timVine = document.getElementById("tim-vine");
-        let navbar = document.getElementById("main-nav");
-
-        let navPos = navbar.getBoundingClientRect().top;
-
-        window.addEventListener("scroll", e => {
-        let scrollPos = window.scrollY;
-        if (scrollPos > navPos) {
-            navbar.classList.add('sticky');
-            header.classList.add('navbarOffsetMargin');
-        } else {
-            navbar.classList.remove('sticky');
-            header.classList.remove('navbarOffsetMargin');
-        }
-        });
+        $("section.lazy").lazyload();
+        $("section.lazy").lazyload();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.lazyload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="jquery.lazy.min.js"></script>
 </body>
 </html>

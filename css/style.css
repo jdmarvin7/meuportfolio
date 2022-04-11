@@ -146,3 +146,39 @@ button {
     scroll-behavior: smooth;
   }
 }
+
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .title span {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        padding: 1rem .5rem;
+    }
+
+    nav ul li {
+        font-size: 30px;
+    }
+
+    .about__container {
+        flex-direction: column;
+        text-align: capitalize;
+    }
+
+    .about__container:hover {
+        transform: skewX(-1deg);
+        position: relative;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
